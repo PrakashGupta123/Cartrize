@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardDetail">
+            <connections>
+                <outlet property="bi_telLbl" destination="Gcu-gk-vBq" id="Xcf-J5-3Ue"/>
+                <outlet property="headerLbl" destination="gJd-ts-Lfp" id="cxB-Dw-aF9"/>
+                <outlet property="imgItemOrder" destination="TFS-b8-g8o" id="iIR-Pz-aSh"/>
+                <outlet property="imgTblBackground" destination="S7a-RW-MRI" id="PH5-X3-Bpe"/>
+                <outlet property="lblDiscount" destination="V8Q-8N-4y1" id="pYm-rG-eEQ"/>
+                <outlet property="lblItemOrder" destination="4VO-cR-PTT" id="4G6-ij-ymi"/>
+                <outlet property="lblPayMentMethod" destination="yUA-MA-hpP" id="81Y-Qn-YIz"/>
+                <outlet property="lblPayMentType1" destination="Vfj-bd-7Ec" id="l1s-tl-CBi"/>
+                <outlet property="lblPayMentType2" destination="qeO-aL-O7C" id="ZEx-mf-R0R"/>
+                <outlet property="lblPayMentType3" destination="yUA-MA-hpP" id="eGE-Kg-9as"/>
+                <outlet property="lblPayMentType4" destination="INw-2h-TIo" id="2Ge-Te-rtb"/>
+                <outlet property="lblShippingMethod" destination="INw-2h-TIo" id="7ax-5A-ihY"/>
+                <outlet property="lblSubTotal" destination="fiw-Uz-doD" id="kcp-TY-vNU"/>
+                <outlet property="sagment" destination="dtf-dF-gDW" id="UZq-Rl-u7c"/>
+                <outlet property="sh_addLbl" destination="ShT-tQ-YJL" id="4uh-ym-73P"/>
+                <outlet property="sh_cityLbl" destination="c3h-eO-wnR" id="wZB-zP-kLP"/>
+                <outlet property="sh_countryLbl" destination="lDb-AE-jnr" id="ngG-uf-lAb"/>
+                <outlet property="sh_namelbl" destination="onw-Sq-BYd" id="iaD-74-SQu"/>
+                <outlet property="tableViewItemOrder" destination="crf-h1-7GB" id="amY-EL-swx"/>
+                <outlet property="view" destination="q8b-RN-3bB" id="phU-PL-da8"/>
+                <outlet property="viewBilling" destination="74Y-ti-uWk" id="WrM-yS-c9A"/>
+                <outlet property="viewPayment" destination="woP-Bd-GN8" id="fkx-de-l1U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="q8b-RN-3bB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashboard_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="xK1-8e-ACX">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7X9-8f-2cM">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                    <color key="backgroundColor" red="0.65098041299999998" green="0.73333334920000004" blue="0.40392160420000001" alpha="1" colorSpace="deviceRGB"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-ts-Lfp">
+                    <rect key="frame" x="34" y="21" width="265" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb0-pK-Ith">
+                    <rect key="frame" x="0.0" y="16" width="37" height="31"/>
+                    <state key="normal" image="back_arrow.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="XyS-HQ-CSl"/>
+                        <action selector="backAction:" destination="-1" eventType="touchUpOutside" id="cuF-jN-CdH"/>
+                    </connections>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dtf-dF-gDW">
+                    <rect key="frame" x="2" y="63" width="316" height="29"/>
+                    <segments>
+                        <segment title="Delivery Address"/>
+                        <segment title="Billing Address"/>
+                        <segment title="Payment Method"/>
+                    </segments>
+                    <color key="tintColor" red="0.65098039220000004" green="0.73333333329999995" blue="0.36862745099999999" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <action selector="segmentAction:" destination="-1" eventType="valueChanged" id="fms-oc-czs"/>
+                    </connections>
+                </segmentedControl>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="woP-Bd-GN8">
+                    <rect key="frame" x="0.0" y="98" width="320" height="120"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_whitebox_shipping.png" translatesAutoresizingMaskIntoConstraints="NO" id="ah9-7N-pES">
+                            <rect key="frame" x="10" y="0.0" width="300" height="120"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Method" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfj-bd-7Ec">
+                            <rect key="frame" x="16" y="9" width="117" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shipping Method" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeO-aL-O7C">
+                            <rect key="frame" x="16" y="34" width="117" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Method" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUA-MA-hpP">
+                            <rect key="frame" x="140" y="9" width="167" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shipping Method" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INw-2h-TIo">
+                            <rect key="frame" x="140" y="34" width="167" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="74Y-ti-uWk">
+                    <rect key="frame" x="0.0" y="98" width="320" height="124"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_whitebox_shipping.png" translatesAutoresizingMaskIntoConstraints="NO" id="xm9-Si-YpU">
+                            <rect key="frame" x="10" y="0.0" width="300" height="123"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onw-Sq-BYd">
+                            <rect key="frame" x="18" y="5" width="285" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShT-tQ-YJL">
+                            <rect key="frame" x="18" y="25" width="285" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3h-eO-wnR">
+                            <rect key="frame" x="18" y="49" width="285" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDb-AE-jnr">
+                            <rect key="frame" x="18" y="74" width="285" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mob" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcu-gk-vBq">
+                            <rect key="frame" x="20" y="100" width="285" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFS-b8-g8o">
+                    <rect key="frame" x="10" y="225" width="300" height="27"/>
+                    <color key="backgroundColor" red="0.65098039220000004" green="0.73333333329999995" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZg-AM-yBl">
+                    <rect key="frame" x="10" y="225" width="300" height="27"/>
+                    <color key="backgroundColor" red="0.65098039215686276" green="0.73333333333333328" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Items Ordered" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VO-cR-PTT">
+                    <rect key="frame" x="20" y="228" width="215" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_whitebox_shipping.png" translatesAutoresizingMaskIntoConstraints="NO" id="S7a-RW-MRI">
+                    <rect key="frame" x="10" y="256" width="300" height="112"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="crf-h1-7GB">
+                    <rect key="frame" x="0.0" y="256" width="320" height="106"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Mwu-2h-keX"/>
+                        <outlet property="delegate" destination="-1" id="eeV-ak-DxC"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5a-Lc-vIs">
+                    <rect key="frame" x="0.0" y="372" width="320" height="55"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_whitebox_shipping.png" translatesAutoresizingMaskIntoConstraints="NO" id="qyB-yW-Nre">
+                            <rect key="frame" x="10" y="2" width="300" height="49"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtotal + Billing($7.99)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llJ-uh-1Is">
+                            <rect key="frame" x="21" y="1" width="160" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiw-Uz-doD">
+                            <rect key="frame" x="193" y="1" width="112" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8Q-8N-4y1">
+                            <rect key="frame" x="193" y="24" width="112" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vo-6R-hr2">
+                            <rect key="frame" x="21" y="24" width="70" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bdr_subtotal.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pbf-1A-SZa">
+                            <rect key="frame" x="19" y="21" width="273" height="1"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bdr_subtotal.png" translatesAutoresizingMaskIntoConstraints="NO" id="c9W-Jq-wGO">
+                            <rect key="frame" x="19" y="45" width="273" height="1"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_arrow.png" width="11" height="18"/>
+        <image name="bdr_subtotal.png" width="255" height="1"/>
+        <image name="bg_whitebox_shipping.png" width="300" height="159"/>
+        <image name="dashboard_bg.png" width="640" height="1136"/>
+    </resources>
+</document>

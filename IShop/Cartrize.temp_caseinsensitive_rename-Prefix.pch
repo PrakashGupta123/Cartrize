@@ -1,0 +1,92 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
+#define IS_IPHONE_4 ([UIScreen mainScreen].bounds.size.height==480)
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "AppDelegate.h"
+#endif
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+#define CRplacehoderimage @"Place_holder.png"
+#define CRtoolBarNavimage @"CRtoolBarNavimageCRtoolBarNavimage"
+#define CRmainBG @"bg_product.png"
+#define CRcrossButton @"remove.png"
+
+#define kOAuthConsumerKey @"rezRussYVr5gtxX7tvgVEcnLx"
+#define kOAuthConsumerSecret @"CyayJUP4v7sWMO2toiQ84UxxiWeOr4r8IDtvWVMLL3tebJWGvu"
+
+#define  GOOGLE_kClientID  @"586890710364-pbld9i8gsg7ma3qu54ahn6jdpfc734rr.apps.googleusercontent.com"
+#define  mailValidation  @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+
+#define button_bg_color [UIColor colorWithRed:61.0/255.0 green:198.0/255.0 blue:216.0/255.0 alpha:1.0];
+
+#define product_gallery  @"http://cartrize.com/iosapi_cartrize.php?methodName=getMediaGallery&prd_id=%@"
+
+#define product_Color @"http://cartrize.com/iosapi_cartrize.php?methodName=getDefaultOption"
+
+#define user_registration @"http://cartrize.com/iosapi_cartrize.php?methodName=CreateCustomer"
+
+#define user_login  @"http://cartrize.com/iosapi_cartrize.php?methodName=userLogin"
+
+#define get_user_favorite @"http://cartrize.com/iosapi_cartrize.php?methodName=GetUserFavoriteHistory"
+
+#define get_user_all_favorite @"http://cartrize.com/iosapi_cartrize.php?methodName=GetUserAllFavoriteHistory"
+
+#define get_user_all_checkout_history @"http://cartrize.com/iosapi_cartrize.php?methodName=GetUserAllCheckoutHistory"
+
+#define get_user_checkout_history @"http:/cartrize.com/iosapi_cartrize.php?methodName=GetUserCheckoutHistory"
+
+//Payment
+#define region_country @"http://cartrize.com/iosapi_cartrize.php?methodName=getAllRegion"
+#define all_region @"http://cartrize.com/iosapi_cartrize.php?methodName=getAllRegion"
+
+#define all_country @"http://cartrize.com/iosapi_cartrize.php?methodName=getAllCountry"
+
+#define set_cart_customer @"http://cartrize.com/iosapi_cartrize.php?methodName=SetCustToCrt"
+
+#define set_cart_product @"http://cartrize.com/iosapi_cartrize.php?methodName=adPrdToCrt"
+
+#define set_cart_Address @"http://cartrize.com/iosapi_cartrize.php?methodName=setCustAddress"
+
+#define set_shipping_method @"http://cartrize.com/iosapi_cartrize.php?methodName=setCustCrtShipMethod"
+
+#define flat_shipMethod @"http://cartrize.com/iosapi_cartrize.php?methodName=FlatShipMethod"
+
+#define free_shipMethod @"http://cartrize.com/iosapi_cartrize.php?methodName=FreeShipMethod"
+
+#define ups_shipMethod @"http://cartrize.com/iosapi_cartrize.php?methodName=UPSShipMethod"
+
+
+#define set_card_type @"http://cartrize.com/iosapi_cartrize.php?methodName=getcctype"
+#define set_Payment_Method @"http://cartrize.com/iosapi_cartrize.php?methodName=setCustCrtPayMethod"
+
+#define set_Cart_info @"http://cartrize.com/iosapi_cartrize.php?methodName=getCrtInfo"
+
+#define search_result @"http://cartrize.com/iosapi_cartrize.php?methodName=getCategorySearchByKeyword&key=%@"
+
+#define refine_search @"http://cartrize.com/iosapi_cartrize.php?methodName=getAllOptionsForRefine&key=%@"
+
+#define apply_refine_search @"http://cartrize.com/iosapi_cartrize.php?methodName=getRefineByOptionsValues&key=%@"
+
+#define product_option @"http://cartrize.com/liosapi_cartrize.php?methodName=getAllProductsOptions&prd_id=%@"
+
+#define currency_code @"http://cartrize.com/iosapi_cartrize.php?methodName=currency_codes"
+
+#define search_by_name @"http://cartrize.com/iosapi_cartrize.php?methodName=getSearchByName&key=%@"
